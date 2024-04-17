@@ -48,7 +48,7 @@ end
 activation(x) = x >= 0 ? 1.0 : -1.0
 
 # Predict output for a single input
-function predict(perceptron::Perceptron, inputs::Vector{Float64})
+function predict_output(perceptron::Perceptron, inputs::Vector{Float64})
     activation(sum(perceptron.weights .* inputs) + perceptron.bias)
 end
 
